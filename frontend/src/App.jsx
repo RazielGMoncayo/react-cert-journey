@@ -1,10 +1,12 @@
-import { useState } from 'react'
 import './App.css'
+import Task from './components/task'
 
 function App() {
   return (
     <>
-      <h1>Task Manager</h1>
+      <Task title="React proyect"/>
+      <Task title="Restyling"/>
+      <Task title="CV Update"/>
     </>
   )
 }
