@@ -2,6 +2,8 @@ import { useState } from "react";
 
 export default function TitleInput() {
 
+    //* State
+
     const [title, setTitle] = useState("")
 
     //* Handlers - named function declaration 
@@ -15,6 +17,7 @@ export default function TitleInput() {
         setTitle(e.target.value) // e represents the input change event
     }
 
+    //* JSX
     return (
         <>
             <form onSubmit={handleSubmit}>                
