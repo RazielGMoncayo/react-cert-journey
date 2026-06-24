@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function TitleInput() {
+export default function TitleInput({onAddTask}) {
 
     //* State
 
@@ -10,6 +10,8 @@ export default function TitleInput() {
 
     const handleSubmit = (e) => {
         e.preventDefault() //  Prevents the default form submission and page reload
+        onAddTask(title)
+        setTitle("")
         console.log("Submitted title: ", title)
     }
 
