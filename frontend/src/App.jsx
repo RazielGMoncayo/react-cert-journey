@@ -1,5 +1,6 @@
 import './App.css'
 import Task from './components/task'
+import TitleInput from './components/TitleInput'
 
 function App() {
   const titles = [
@@ -11,9 +12,11 @@ function App() {
     <>
       {
         titles.map((t) => (
-          <Task key={t.id}  title={t.title}/> // Redering list React 
+          <Task key={t.id}  title={t.title}/> // Redering list React - 
         ))
       }
+      <br/><br/>
+      <TitleInput/>
     </>
   )
 }
