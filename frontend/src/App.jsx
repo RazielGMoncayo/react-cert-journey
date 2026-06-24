@@ -11,16 +11,10 @@ function App() {
     {id: "t3" , title: "CV Update"}
   ])
 
-  //**
-  // Recibe el título nuevo como parámetro (un string)
-  // Crea un nuevo objeto con ese título y un id único
-  // Usa setTitles para agregar ese objeto al array existente, sin perder los que ya estaban
-  //  */
-  
   const addTask = (newTitle) => {
-    const newTask = {id: Date.now(), title: newTitle}
-    const updateTitles = [...titles, newTask]
-    setTitles(updateTitles)
+    const newTask = {id: Date.now(), title: newTitle} //Create a new object with the new title 
+    const updateTitles = [...titles, newTask] // merge the new title on the title list object 
+    setTitles(updateTitles) // adding the new object created as "updateTitle" as the new title list 
   }
 
   return (
@@ -31,7 +25,7 @@ function App() {
         ))
       }
       <br/><br/>
-      <TitleInput onAddTask={addTask}/>
+      <TitleInput onAddTask={addTask}/> 
     </>
   )
 }
