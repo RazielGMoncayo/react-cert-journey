@@ -11,7 +11,7 @@ export default function TitleInput({onAddTask}) {
     const handleSubmit = (e) => {
         e.preventDefault() //  Prevents the default form submission and page reload
         onAddTask(title)
-        setTitle("")
+        setTitle("") // Deleting the text on the input  
         console.log("Submitted title: ", title)
     }
 

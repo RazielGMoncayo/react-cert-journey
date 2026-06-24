@@ -12,7 +12,7 @@ This project grows phase by phase — starting from JavaScript fundamentals all 
   let/const, arrow functions, destructuring, spread/rest, modules, array methods, promises & async/await `completed`
 
 - **Phase 1 — React + CSS**
-  JSX, components, props, events, state, lists, forms `in progress`
+  JSX, components, props, events, state, lists, forms `completed`
 
 - **Phase 2 — React + TypeScript**
   Types, interfaces, typed events and state
