@@ -1,19 +1,32 @@
 import { useState } from "react";
 
-export default function TitleInput() {
+export default function TitleInput({onAddTask}) {
+
+    //* State
 
     const [title, setTitle] = useState("")
 
+    //* Handlers - named function declaration 
+
+    const handleSubmit = (e) => {
+        e.preventDefault() //  Prevents the default form submission and page reload
+        onAddTask(title)
+        setTitle("") // Deleting the text on the input  
+        console.log("Submitted title: ", title)
+    }
+
+    const handleChange = (e) => {
+        setTitle(e.target.value) // e represents the input change event
+    }
+
+    //* JSX
     return (
         <>
-            <form onSubmit={ e => {
-                e.preventDefault() //  Prevents the default form submission and page reload
-                console.log("Submitted title: ", title)
-            } }>                
+            <form onSubmit={handleSubmit}>                
                 <input 
                     type="text" 
                     value={title} 
-                    onChange={ e => setTitle(e.target.value) }/> {/* e represents the input change event */}
+                    onChange={handleChange}/>
                 <p>{title}</p>
                 <button>Create Task</button>
             </form>
