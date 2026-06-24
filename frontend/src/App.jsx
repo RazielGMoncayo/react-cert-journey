@@ -12,7 +12,7 @@ function App() {
     <>
       {
         titles.map((t) => (
-          <Task key={t.id}  title={t.title}/> // Redering list React - 
+          <Task key={t.id}  title={t.title}/> // Rendering list React - 
         ))
       }
       <br/><br/>
