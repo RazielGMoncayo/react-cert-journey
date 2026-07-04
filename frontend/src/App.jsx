@@ -1,15 +1,18 @@
 import './App.css'
 import Task from './components/task'
 import TitleInput from './components/TitleInput'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+
 
 function App() {
 
-  const [titles, setTitles] = useState([
-    {id: "t1" , title: "React project"}, 
-    {id: "t2" , title: "Restyling"}, 
-    {id: "t3" , title: "CV Update"}
-  ])
+  const [titles, setTitles] = useState( () => {
+    const saved = localStorage.getItem("tasks")
+    return saved ? JSON.parse(saved) : []
+  })
+
+    useEffect(() => {
+    localStorage.setItem("tasks", JSON.stringify(titles))}, [titles])
 
   const addTask = (newTitle) => {
     const newTask = {id: Date.now(), title: newTitle} //Create a new object with the new title 

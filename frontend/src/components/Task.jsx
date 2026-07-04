@@ -15,7 +15,7 @@ export default function Task( { title } ) { // {title} = prop
     //? Handlers 
 
     const handleClick = () => {
-        setCompleted(!completed) // update the complete value 
+        setCompleted(prev => !prev) // update the complete value 
     }
 
     //?JSX
