@@ -7,13 +7,13 @@ import TaskDetail from './pages/TaskDetail'
 function App() {  
 
   return (
-    <main>
+    <div>
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/about' element={<About/>}/>
         <Route path='/task/:id' element={<TaskDetail/>}/>
       </Routes>
-    </main>
+    </div>
   )}
 
 export default App
