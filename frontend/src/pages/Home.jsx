@@ -1,6 +1,7 @@
 import Task from "../components/task";
 import TitleInput from "../components/TitleInput";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 export default function Home() {
     const [titles, setTitles] = useState(() => {
@@ -26,6 +27,8 @@ return (
         <br />
         <br />
         <TitleInput onAddTask={addTask} />
+        <br/>
+        <Link to="/about">Go to About</Link>        
     </main>
     );
 }
