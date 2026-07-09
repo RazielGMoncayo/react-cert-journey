@@ -1,4 +1,5 @@
 import { useState, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function TitleInput({onAddTask}) {
 
@@ -8,14 +9,16 @@ export default function TitleInput({onAddTask}) {
 
     const inputRef = useRef(null)
 
+    const navigate = useNavigate()
+
     //* Handlers - named function declaration     
 
     const handleSubmit = (e) => {
         e.preventDefault() //  Prevents the default form submission and page reload
-        onAddTask(title)
+        const newId = onAddTask(title)
         setTitle("") // Deleting the text on the input  
-        console.log("Submitted title: ", title)
-        inputRef.current.focus()
+        navigate(`/task/${newId}`)
+        // inputRef.current.focus() // Automatically focuses the input after submitting.
     }
 
     const handleChange = (e) => {

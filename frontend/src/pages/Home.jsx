@@ -17,6 +17,7 @@ export default function Home() {
         const newTask = { id: Date.now(), title: newTitle }; //Create a new object with the new title
         const updateTitles = [...titles, newTask]; // merge the new title on the title list object
         setTitles(updateTitles); // adding the new object created as "updateTitle" as the new title list
+        return  newTask.id
         };
 
 return (
