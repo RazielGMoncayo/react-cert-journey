@@ -107,7 +107,7 @@ The following topics are required for the React Junior certification. This proje
 - **Phase 0 — JavaScript Fundamentals** `completed`
   let/const, arrow functions, destructuring, spread/rest, modules, array methods, promises & async/await
 
-- **Phase 1 — React + CSS** `in progress`
+- **Phase 1 — React + CSS** `in progress`  
   JSX, components, props, events, state, lists, forms, hooks, React Router `done`  
   Plain CSS styling `pending`
 
